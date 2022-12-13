@@ -9,7 +9,7 @@ c++ program design mooc version (2nd version)
 
 
 
-chapter 1 to 6 is the C knowledge.
+chapter 1 to 6 is the C knowledge\n
 chapter 7 to 10 is the c++ knowledge.
 final example is the microsoft c++ mfc library and how to develop the c++ windoews user graphic program
 
