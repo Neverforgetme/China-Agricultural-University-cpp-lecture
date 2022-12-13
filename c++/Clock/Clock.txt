@@ -1,0 +1,103 @@
+#include <iostream>
+
+using namespace std;
+//version 1 no inline function
+// class Clock
+// {
+//     private:
+//     int hour;
+//     int minute;
+//     int second;
+    
+    
+// public:
+//   void Set();
+//   void Show();
+   
+// };
+
+class Clock
+{
+    private:
+    int hour;
+    int minute;
+    int second;
+    
+    
+public:
+
+
+
+   void Set();
+   void Set(int hour=0,int minute=0, int second=0);
+   
+   //construction declearation
+   Clock(int,int ,int);
+   Clock(Clock &rObj);
+   Clock();
+   inline void Show()
+   {
+       
+       std::cout << hour<<" "<<minute<<" "<<second<<" " << std::endl;
+   }
+   
+};
+
+/////////////////
+/.cpp define file
+
+//////////
+
+
+
+#include <iostream>
+#include "Clock.h"
+
+using namespace std;
+
+
+Clock::Clock()
+{
+    hour=0;
+    minute=0;
+    second=0;
+    cout<<"we have called Clock()\n";
+}
+
+void Clock::Set()
+{
+    cin>>hour>>minute>>second;
+    cout<<"we have called Clock::Set()\n";
+}
+
+void Clock::Set(int hour,int minute, int second)
+{
+    this->hour=hour;
+    this->minute=minute;
+    this->second=second;
+}
+
+
+Clock :: Clock(int p1=0,int p2=0,int p3=0)
+{
+    hour=p1;minute=p2;second=p3;
+    cout<<"we have called Clock(int p1=0,int p2=0,int p3=0))\n";
+}
+
+
+
+Clock:: Clock(Clock &rObj)
+{
+    hour=rObj.hour;
+    minute=rObj.minute;
+    second=rObj.second;
+    cout<<"we have called Clock(Clock &rObj)\n";
+}
+
+// void Clock::Show()
+// {
+//     cout<<hour<<";"<<minute<<";"<<second<<endl;
+    
+// }
+
+
